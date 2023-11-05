@@ -1,0 +1,60 @@
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgb(154, 70, 70);
+  border-radius: 4px;
+  transition: 0.3; /*fica mais suave a transição para as animações*/
+}
+
+/*com o mouse encima*/
+a:hover {
+  background: rgb(192, 95, 95);
+}
+
+/*navega pelo tab e fica em foco quando clicado, ideal para links*/
+a:focus {
+  outline: none; /*por padrão tem a borda azul, desativamos para por a nossa*/
+  border: 2px solid rgb(80, 13, 13);
+}
+
+/*quando clicado*/
+a:active {
+  background: rgb(182, 96, 15);
+}
+
+/*deixa o link roxo quando visitado, ideal para lista de links, não para botões Obs.: não atribuirei nenhum valor pois irá se sobresair nos outros*/
+/* a:visited {} */
+
+/*pinta todos da lista 1*/
+.lista-1 li {
+  background: #fda;
+}
+
+/*comando que pinta apenas o 1º elemento da lista obs.: tem prioridade em relação ao comando que pinta todos da lista*/
+.lista-1 li:first-child {
+  background: #caf;
+}
+
+/*comando que pinta apenas o último elemento da lista obs.: tem prioridade em relação ao comando que pinta todos da lista*/
+.lista-1 li:last-child {
+  background: #cfa;
+}
+
+/*comando que pinta apenas o elemento desejado da lista indicado no índice obs.: tem prioridade em relação ao comando que pinta todos da lista*/
+.lista-1 li:nth-child(3) {
+  background: rgb(198, 73, 104);
+}
+
+/* tamvém utilizando o comando anterior é possível selecionar somente os pares(even) ímpares(odd) a cada X (Xn) */
+.lista-2 li:nth-child(even) {
+  background: #cfa;
+}
+
+/*neste exemplo definimos a cor da li para roxo com execção do primeiro, último e terceiro*/
+.lista-3 li:not(:first-child, :last-child, :nth-child(3)) {
+  background: #caf;
+}

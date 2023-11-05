@@ -1,0 +1,141 @@
+.formacao {
+  background: #203967;
+  /* background: #141414; */
+  color: #ffff;
+}
+
+.formacao-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+.formacao .subtitulo_destacado {
+  margin-top: 120px;
+  color: #ebc852;
+  max-width: 5ch;
+}
+
+.formacao-texto {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  max-width: 65ch;
+  margin-bottom: 60px;
+  /* color: #172f5b; */
+  color: #ffffff;
+  text-align: justify;
+}
+
+.formacao-texto strong {
+  color: #ebc852;
+}
+
+.faculdade-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.faculdade {
+  flex: 1; /*com isso deixamos cada elemento do mesmo tamanho lado a lado, crescendo ao máximo que da*/
+  background: #ebc852;
+  padding: 20px;
+  border-radius: 4px;
+  color: #203967;
+
+  /*com isso o span passa a receber os comandos do margint-bottom*/
+  display: flex;
+  flex-direction: column;
+}
+
+.faculdade-tipo {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #203967;
+  margin-bottom: 10px;
+}
+
+.faculdade-curso {
+  flex: 1; /*com isso deixamos esse elemento buscando sempre crescer o máximo que da igualmente e com isso ficando lado a lado*/
+  font-size: 1.15rem;
+  line-height: 1.4rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.faculdade-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: #141414;
+  position: absolute;
+  left: -24px;
+}
+
+.faculdade-instituicao {
+  font-size: 1.15rem;
+  color: #203967;
+}
+
+.cursos {
+  margin-bottom: 60px;
+}
+
+.formacao-extra h3 {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  position: relative;
+}
+
+.formacao-extra h3::before {
+  display: block;
+  content: "";
+
+  /*essas informações ja estão nos vetores*/
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+
+.cursos h3::before {
+  background: url("./img/cursos.svg") no-repeat center center;
+}
+.idiomas h3::before {
+  background: url("./img/idiomas.svg") no-repeat center center;
+}
+
+.formacao-extra span {
+  color: #7a9ee1;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.idiomas span {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}

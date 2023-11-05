@@ -1,0 +1,18 @@
+.fixo {
+  position: fixed; /* com o fixed ele permanece fixo na dela*/
+  bottom: 40px; /*só vai funcionar se o position estiver modificado como é o caso do fixed, relative por exemplo*/
+  left: 40px;
+}
+
+h1 {
+  border: 2px solid #ccc;
+  padding: 20px 20px 200px 20px;
+}
+
+p {
+  background: #e7e7e7;
+  border: 1px solid #d7d7d7;
+  padding: 20px;
+  margin: 0px;
+  font-size: 20px;
+}

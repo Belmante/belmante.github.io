@@ -1,0 +1,169 @@
+body {
+  background: rgb(242, 242, 242);
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+ul {
+  padding: 0rem;
+  margin: 0rem;
+  list-style: none;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+.titulo {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cabecalho {
+  margin-top: -1rem;
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.botao_cabecalho a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+.botao_cabecalho {
+  padding: 0.5rem 2rem;
+  background-color: rgb(144, 8, 156);
+  border-radius: 2rem;
+  transition: 0.3;
+}
+
+.botao_cabecalho:hover {
+  background-color: rgb(111, 28, 119);
+}
+
+.botao_cabecalho:active {
+  background-color: rgb(68, 14, 73);
+}
+
+/* aqui dizemos basicamente que o conteudo principal fica ao centro e dividido em 2 partes */
+.principal_grid {
+  display: grid; /*aqui habilitamos o grid da parte principal*/
+  grid-template-columns: 1fr 1fr; /*divisão doo texto e a imagem da introdução*/
+  max-width: 60rem; /*limite que irá se extender*/
+  margin-top: 0.5rem; /*distância do topo*/
+}
+
+.introducao {
+  background: rgb(254, 254, 254);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+
+  text-align: right;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  justify-items: end;
+
+  position: relative; /*agora esse elemento será usado de referencia para o detalhe*/
+}
+
+/*criando o pseudo elemento do detalhe*/
+.introducao::before {
+  content: ""; /*para que ele fique visivel na tela*/
+  width: 4rem;
+  height: 0.25rem;
+  background-color: rgb(144, 8, 156);
+  position: absolute;
+  top: 2rem;
+  right: -2rem;
+}
+
+.introducao h2 {
+  font-size: 2rem;
+}
+
+.botao_vermais {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+
+  padding: 0.8rem 2rem;
+  background-color: rgb(144, 8, 156);
+  border-radius: 2rem;
+  transition: 0.3;
+}
+
+.botao_vermais:hover {
+  background-color: rgb(111, 28, 119);
+}
+
+.botao_vermais:active {
+  background-color: rgb(68, 14, 73);
+}
+
+.imagem_bicicleta img {
+  max-width: 100%;
+  grid-column: 2 / 3;
+}
+
+.titulo_vantagens {
+  margin-top: 6rem;
+  font-size: 4rem;
+  text-align: right;
+  text-transform: uppercase;
+  color: #969090;
+  background-image: url("./onda.svg");
+
+  padding: 30px;
+}
+
+.vantagens {
+  background: rgb(254, 254, 254);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+}
+
+.vantagens_item {
+  display: grid;
+  grid-template-columns: auto 1fr; /*aqui você define como automátivo o primeiro pois varia deacordo com o tamanho do ícone e a segunda que irá distribuir o quanto sobrar*/
+  gap: 1rem 1.5rem; /*o primeiro define a distancia entre as linhas e o segundo a distância do ícone ou seja da 1ª coluna*/
+  padding: 1rem;
+  border-left: 0.5rem solid transparent; /* Define uma borda esquerda inicial transparente */
+  /* transition: border-left-color 0.3s; Adiciona uma transição suave para a mudança de cor, opcional */
+}
+
+/*dizendo que o parágrado precisa ficar na coluna 2, caso não especifique irá bugar por ser grande*/
+.vantagens_item p {
+  grid-column: 2;
+}
+
+/* tamvém utilizando o comando anterior é possível selecionar somente os pares(even) ímpares(odd) a cada X (Xn) */
+.vantagens_item:nth-child(odd) {
+  background: rgb(242, 242, 242);
+}
+
+.vantagens_item:hover {
+  border-left-color: rgb(68, 14, 73);
+}
+
+footer {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box; /*impede de extourar os lados e gerar barra de rolagem*/
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h4 {
+  font-weight: 300;
+}

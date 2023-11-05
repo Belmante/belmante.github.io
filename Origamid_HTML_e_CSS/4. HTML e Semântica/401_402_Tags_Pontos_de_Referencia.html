@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Pontos de Referencia</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header> <!-- cabeçalho -->
+    <nav aria-label="primaria"> <!-- marca um bloco de navegação -->
+      <a href="/">Home</a>
+      <a href="/">Sobre</a>
+      <a href="/">Contato</a>
+    </nav>
+  </header>
+
+  <main> <!-- marca o bloco principal -->
+    <h1>Empresa Nome</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis leo in urna commodo dapibus. Sed sed fermentum ipsum, ut egestas ipsum. Aliquam erat volutpat. Aliquam placerat pulvinar purus, non gravida enim faucibus ut.</p>
+  </main>
+
+  <!-- article faz sentido até se fosse lido fora de contexto -->
+  <article aria-labelledby="sobrebike"> <!-- dessa forma não vai repetir 2x o titulo na narração -->
+    <h2 id="sobrebike">Sobre nós</h2>
+    <p>A empresa foi fundada em 2001</p>
+  </article>
+
+  <!-- section não faz sentido até se fosse lido fora de contexto, não cria ponto de referencia na narração, é usada para agrupar elementos -->
+  <section>
+
+  </section>
+
+  <!-- rodapé -->
+  <footer>
+    <p>alguns deireitos reservados</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+body {
+  margin: 0px;
+}
+
+section {
+  width: 200px;
+  background: green;
+}
+
+div {
+  background: orange;
+  height: calc(
+    100vh - 100px
+  ); /*consigo calcular esatamente o tamanho da tela e sempre tirar 100pixels da altura*/
+  width: 50vw; /*Obs.: não é mesma coisa que 50% pois seria metade do elemento pai section de apenas 200px*/
+}

@@ -1,0 +1,27 @@
+/* atribuindo fonte padrão do site */
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+/* removendo o estidlo da lista e outros */
+ul {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* atribuindo estilo */
+ul {
+  margin-top: 20px;
+  display: flex;
+}
+.botao_header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  background: rgba(230, 230, 230, 0.974);
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 0px 10px;
+}

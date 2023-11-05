@@ -1,0 +1,130 @@
+body {
+  background: #f7f7f7;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+.titulo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.agradecimento {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 12;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.botoes_flex {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  place-content: center;
+  text-transform: uppercase;
+  flex-wrap: wrap; /*habilita quebrar em outra linha quando não couber mais*/
+}
+
+h2 {
+  font-size: 16px;
+  background: rgb(144, 8, 156);
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+}
+
+.conteudo_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+.foto {
+  max-width: 100%;
+  grid-column: 2 / 3;
+}
+
+.introducao {
+  background: rgb(254, 254, 254);
+  border-radius: 8px;
+  padding: 40px;
+  text-align: right;
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  justify-items: end;
+  position: relative; /*agora esse elemento será usado de referencia para o detalhe*/
+}
+
+.detalhe {
+  width: 50px;
+  height: 4px;
+  background: rgb(144, 8, 156);
+
+  position: absolute; /*dessa forma ele deixa de influenciar os outros elementos e fica sozinho*/
+  top: 30px;
+  right: 0px;
+}
+
+.botao_assistir {
+  text-decoration: none;
+  font-size: 16px;
+  background: rgb(144, 8, 156);
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.2; /*distanciando das linhas*/
+}
+
+.titulo_destaques {
+  font-size: 56px;
+  text-transform: uppercase;
+  color: #969090;
+  padding: 30px;
+  align-self: center; /*somente esse item ficará ao centro*/
+}
+
+.Pontos_Marcantes {
+  background: white;
+  padding: 20px;
+}
+
+.pontos_item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0px 15px;
+  padding: 20px;
+}
+
+.pontos_item p {
+  grid-column: 2;
+}
+
+.pontos_item h4 {
+  align-self: center;
+}
+
+.rodape {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /*impede de extourar os lados e gerar barra de rolagem*/
+  background: rgb(255, 255, 255);
+}

@@ -1,0 +1,28 @@
+/*dessa forma todo required ficará com essa estilização*/
+[required] {
+  border: 2px solid #203967;
+}
+
+/*somente o p que for required*/
+p[required] {
+  border: 2px solid #c72222;
+}
+
+/*o elemento dentro do p que for required*/
+p [required] {
+  border: 2px solid #c722a3;
+}
+
+a[href="#contato"] {
+  border: 2px solid #67ec0e;
+}
+
+/*o símbolo ^ significa que começa com... no caso o "#", as ancoras internas do site */
+[href^="#"] {
+  background: #d67dbb;
+}
+
+/*o símbolo $ significa que começa com... no caso o ".com", os links externos do site, origamid.com por exemplo */
+[href$=".com"] {
+  background: #0ebfec;
+}

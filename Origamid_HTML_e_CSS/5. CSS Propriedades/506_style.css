@@ -1,0 +1,43 @@
+/*como o h1::after estará em absolute, o elemento "pai" precisa ser relative*/
+h1 {
+  position: relative;
+}
+
+/*por ser um elemento atribuido como block posteriormente ao atrivuir ::after ele ficará abaixo*/
+h1::after {
+  content: ""; /*atribui um conteúdo mesmo q vazio*/
+  display: block; /*dessa forma ele ocupa um espaço de ponta a ponta*/
+  /*vamos atribuir o tamanho*/
+  width: 40px;
+  height: 20px;
+  background: #caf;
+  position: absolute; /*agora ap osição absoluta é em relação ao pai(h1) que é relativo*/
+  top: 20px; /*de altura em relação ao h1*/
+  z-index: -1;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #caf;
+}
+
+li {
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex; /*dessa forma fica mais maleavel e posso definir posição, por padrão vai alinhar todos os itens ao topo*/
+  align-items: center; /*todos os itens da li alinhados ao centro, tanto o texto como a bolinha*/
+}
+
+li::before {
+  content: "";
+  display: inline-block; /*dessa forma ele ocupa um espaço demarcado dentro do elemento pai*/
+  width: 8px;
+  height: 8px;
+  background: #caf;
+  border: 2px solid rgb(131, 102, 175);
+  margin-right: 10px; /*desgrudar da palavra*/
+  border-radius: 50px; /*dessa forma vira um círculo*/
+}

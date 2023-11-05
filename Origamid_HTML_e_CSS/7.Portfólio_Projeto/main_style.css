@@ -1,0 +1,9 @@
+/* para fins de organização importamos o estilo do global com as informações globais especificamente */
+@import "./global.css";
+
+/* para fins de organização importamos o estilo dos respectivos elementos do site especificamente */
+@import "./cabecalho.css";
+@import "./introducao.css";
+@import "./experiencia.css";
+@import "./formacao.css";
+@import "./footer.css";

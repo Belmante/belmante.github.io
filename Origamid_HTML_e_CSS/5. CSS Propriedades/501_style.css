@@ -1,0 +1,20 @@
+a {
+  text-decoration: none;
+  color: white;
+  background: darkblue;
+  display: inline-block;
+}
+p {
+  background: lightblue;
+}
+
+.px {
+  font-size: 32px;
+  padding: 16px 32px;
+}
+
+/*o rem vai utilizar o a unidade padrão de 1 rem = 16px obs.:tamanho médio = 16px, tamanho grande 24px*/
+.rem {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
